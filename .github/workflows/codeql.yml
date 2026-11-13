@@ -8,6 +8,7 @@ jobs:
   analyze:
     name: Analyze (${{ matrix.language }})
     runs-on: ubuntu-slim
+    timeout-minutes: 10
 
     concurrency:
       group: codeql-${{ matrix.language }}-${{ github.ref }}
